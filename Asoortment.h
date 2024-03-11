@@ -18,7 +18,8 @@ public:
     Asoortment(int price , int amountOfLikes, string performer);
     string show() const;
 
-
+    Asoortment(const Asoortment &other);
+    Asoortment(Asoortment &&other);
 
 
 

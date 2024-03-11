@@ -24,6 +24,13 @@ int main(){
     cout << "________________\n\n\n";
     cout << Employer1 <<endl;
     cout << Employer2 << endl;
+    cout << "________________\n\n\n";
+    Asoortment Asoostmentcopy1(100 , 200000, "Maksim");
+     const Asoortment Asoostmentcopy2{Asoostmentcopy1};
+    cout << Asoostmentcopy2.show() << endl;
+
+
+
 
 
 
