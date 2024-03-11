@@ -10,6 +10,7 @@ using namespace std;
 class Asoortment {
 int price , amountOfLikes;
 string  performer;
+static int  countOfProduct;
 
 public:
     Asoortment(): price(0) , amountOfLikes(0) , performer(""){};
@@ -20,6 +21,10 @@ public:
 
     Asoortment(const Asoortment &other);
     Asoortment(Asoortment &&other);
+    static int countOfProducts() { return countOfProduct;};
+    ~Asoortment(){countOfProduct--;};
+
+
 
 
 
