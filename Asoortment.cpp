@@ -3,7 +3,7 @@
 //
 
 #include "Asoortment.h"
-string Asoortment::show() {
+string Asoortment::show() const {
     return "Performer" + performer + "\n"
     +"AmountOfLikes:" + to_string(amountOfLikes) + "\n "
     + "Price:" + to_string(price) + "\n";

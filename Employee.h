@@ -16,7 +16,9 @@ public:
     Employee(int age, int salary, string name);
 
     ~Employee(){ cout << "Destructor called:\n";};
-    string show();
+    friend ostream &operator << (ostream &os, Employee &obj);
+    friend istream &operator >> (istream &is, Employee &obj);
+
 };
 
 

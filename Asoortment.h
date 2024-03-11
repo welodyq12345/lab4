@@ -16,7 +16,7 @@ public:
     Asoortment(int price );
     Asoortment(int price , int amountOfLikes);
     Asoortment(int price , int amountOfLikes, string performer);
-    string show();
+    string show() const;
 
 
 

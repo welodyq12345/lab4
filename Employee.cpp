@@ -3,11 +3,18 @@
 //
 
 #include "Employee.h"
-string Employee::show() {
-    return  "Name :" + name + "\n"
-    + "Salary:" + to_string(salary) +"\n"
-    +"Age:" + to_string(age ) + "\n";
+ostream &operator << (ostream &os, Employee &obj){
+    return os << "Name :"  << obj.name  <<  "\n"
+    <<  "Salary:" << obj.salary  << "\n"  <<
+    "Age:"  << obj.age  <<  "\n";
+
+};
+istream &operator >> (istream &is, Employee &obj){;
+    return is >> obj.name >> obj.age >> obj.salary ;
 }
+
+
+
 Employee::Employee(int age) {
     this->age = age;
 };

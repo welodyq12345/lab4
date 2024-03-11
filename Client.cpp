@@ -3,6 +3,15 @@
 //
 
 #include "Client.h"
+ostream &operator << (ostream &os, Client &obj){
+    return os << "Name :"  << obj.name <<  "\n"
+              <<  "Credit:" << obj.credit  << "\n"  <<
+              "Age:"  << obj.age  <<  "\n";
+
+};
+istream &operator >> (istream &is, Client &obj){;
+    return is >> obj.name >> obj.age >> obj.credit ;
+}
 Client::Client(int age, int credit, std::string name) {
     this->age = age;
     this->credit =credit;
@@ -16,11 +25,7 @@ Client::~Client() {
 
 }
 
-string Client::show() {
-    return "name: " +name + "\n"
-    +"Age:" + to_string(age) + "\n"
-    + "Credit:" + to_string(credit) + "\n";
-}
+
 
 Client::Client() {
   age = 0;

@@ -15,7 +15,9 @@ class Client {
 public:
     Client(int age, int credit , string name);
     ~Client();
-    string show();
+    friend ostream &operator << (ostream &os, Client &obj);
+    friend istream &operator >> (istream &is, Client &obj);
+
 Client();
 };
 
