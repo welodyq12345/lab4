@@ -1,27 +1,26 @@
 
 #include<iostream>
-#include "Client.h"
-#include"Asoortment.h"
-#include "Employee.h"
+#include "classes/Client.h"
+#include"classes/Asoortment.h"
+#include "classes/Employee.h"
 
 using namespace std;
 int main(){
 
-    Client Client1(15 , 10000, "Anton");
-    Client Client2(20 , 100000 , "sdfsdf");
+    Client Client1(18 , 10000, "Anton");
+    Client Client2(20 , 100000 , "Lyoha");
 
-    Employee Employer1(18 , 100 , "Stas");
-    Employee Employer2(19 , 110 , "Anton");
+    Employee Employer1(18 , 10000 , "Stas");
+    Employee Employer2(19 , 11000 , "Anton");
 
 
-
+    cout << "____Clents______\n\n\n";
     cout << Client1<< endl;
     cout << Client2 << endl;
-    cout << "________________\n\n\n";
-    cout << "________________\n\n\n";
+    cout << "_____Employers______\n\n\n";
     cout << Employer1 <<endl;
     cout << Employer2 << endl;
-    cout << "________________\n\n\n";
+    cout << "______Product_____\n\n\n";
 
     cout << "CountOFProducts:" << Asoortment::countOfProducts()<< endl;
     Asoortment Asoostmentcopy1(100 , 200000, "Maksim");

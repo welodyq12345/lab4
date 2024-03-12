@@ -4,9 +4,15 @@ project(untitled)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(untitled main.cpp
-        Client.cpp
-        Client.h
-        Asoortment.cpp
-        Asoortment.h
-        Employee.cpp
-        Employee.h)
+        classes/Client.cpp
+        classes/Client.h
+        classes/Asoortment.cpp
+        classes/Asoortment.h
+        classes/Employee.cpp
+        classes/Employee.h
+        classes/People.cpp
+        classes/People.h
+        classes/Jaz.cpp
+        classes/Jaz.h
+        classes/Rock.cpp
+        classes/Rock.h)
