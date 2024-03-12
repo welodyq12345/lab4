@@ -29,8 +29,10 @@ int main(){
 
     cout << "___________________________________" << endl;
 
-    Rock RockObj("Lil g", "dfvdf", 15000, 6550, "Danya", "Ok");
-    cout << RockObj << endl;
+    Rock RockObj1("Lil g", "dfvdf", 15000, 6550, "Danya", "Ok");
+    Rock RockObj2 = RockObj1;
+
+    cout << RockObj1 << endl << endl << RockObj2 << endl;
 
     //Finish
     return 0;

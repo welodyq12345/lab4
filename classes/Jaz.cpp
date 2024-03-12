@@ -21,3 +21,13 @@ Jaz::Jaz(string performer, string track, int price, int amountOfLikes, string mo
     mostPopularTrack(mostPopularTrack),
     subscribers(subscribers)
     { countOfProduct++; }
+
+Jaz &Jaz::operator=(const Jaz &obj) {
+    if (this != &obj) {
+        Asoortment::operator=(obj);
+        mostPopularPerformer = obj.mostPopularPerformer;
+        mostPopularTrack = obj.mostPopularTrack;
+        subscribers = obj.subscribers;
+    }
+    return *this;
+}

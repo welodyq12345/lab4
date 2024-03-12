@@ -14,6 +14,7 @@ public:
     ~Rock(){ countOfProduct--; };
 
     friend ostream &operator << (ostream &os, Rock &obj);
+    Rock &operator=(const Rock &obj);
 };
 
 

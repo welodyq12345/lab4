@@ -17,3 +17,12 @@ Rock::Rock()
 Rock::Rock(string performer, string track, int price, int amountOfLikes, string firstPerformer, string firstTrack)
     : Asoortment(performer, track, price, amountOfLikes), firstPerformer(firstPerformer), firstTrack(firstTrack)
     { countOfProduct++; }
+
+Rock &Rock::operator=(const Rock &obj) {
+    if (this != &obj) {
+        Asoortment::operator=(obj);
+        firstPerformer = obj.firstPerformer;
+        firstTrack = obj.firstTrack;
+    }
+    return *this;
+}

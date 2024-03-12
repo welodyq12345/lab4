@@ -14,6 +14,7 @@ public:
     ~Jaz(){ countOfProduct--; };
 
     friend ostream &operator << (ostream &os, Jaz &obj);
+    Jaz &operator=(const Jaz &obj);
 };
 
 

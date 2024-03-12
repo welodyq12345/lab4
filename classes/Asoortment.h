@@ -17,5 +17,7 @@ public:
     ~Asoortment(){ countOfProduct--; };
 
     static int countOfProducts() { return countOfProduct; };
+    Asoortment &operator=(const Asoortment &obj);
+
 };
 #endif
