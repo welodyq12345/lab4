@@ -10,14 +10,12 @@ class Employee : public People
     string dateOfBirthday, location;
     int stage;
 public:
-    Employee(int age);
-    Employee(int age, int salary);
-    Employee(int age, int salary, string name);
+    Employee();
+    Employee(string name, int age, int salary, string dateOfBirthday, string location, int stage);
+    Employee(const Employee &other);
+    ~Employee(){};
 
-    ~Employee(){ cout << "Destructor called:\n";};
     friend ostream &operator << (ostream &os, Employee &obj);
-    friend istream &operator >> (istream &is, Employee &obj);
-
 };
 
 

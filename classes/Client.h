@@ -10,12 +10,12 @@ class Client : public People
     string tel;
 
 public:
-    Client(int age, int credit , string name);
-    ~Client();
+    Client();
+    Client(string name, int age, int money, string tel);
+    Client(Client &&other);
+    ~Client(){};
+
     friend ostream &operator << (ostream &os, Client &obj);
-
-
-Client();
 };
 
 

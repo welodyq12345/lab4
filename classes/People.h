@@ -10,9 +10,11 @@ protected:
     int age, money;
 
 public:
+    People();
     People(string name, int age, int money);
     People(const People &other); //Deep Copy
     People(People &&other); //Move
+    ~People(){};
 };
 
 

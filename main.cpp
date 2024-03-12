@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include "classes/Client.h"
 #include"classes/Jaz.h"
@@ -8,20 +7,20 @@
 using namespace std;
 int main(){
 
-    Client Client1(18 , 10000, "Anton");
-    Client Client2(20 , 100000 , "Lyoha");
 
-    Employee Employer1(18 , 10000 , "Stas");
-    Employee Employer2(19 , 11000 , "Anton");
+    Client Client1("Stasik", 18, 500, "+380 98 555 5555");
+    Client Client2("Maksym Koka", 25, 1500, "+380 98 555 5555");
+    Client Client3("Nastya", 20, 5500, "+380 98 555 5555");
+    Client Client4 = move(Client3);
+    cout << Client1 << endl << endl << Client2 << endl << endl << Client3 << endl << endl << Client4 << endl;
 
+    cout << "___________________________________" << endl;
 
-    cout << "____Clents______\n\n\n";
-    cout << Client1<< endl;
-    cout << Client2 << endl;
-    cout << "_____Employers______\n\n\n";
-    cout << Employer1 <<endl;
-    cout << Employer2 << endl;
-    cout << "______Product_____\n\n\n";
+    Employee Employer1("Fedia", 15, 2000, "01.07.2005", "France", 2);
+    Employee Employer2("Vitaliy", 55, 10, "15.02.1978", "Germany", 5);
+    Employee Employer3{Employer2};
+    cout << Employer1 << endl << endl << Employer2 << endl << endl << Employer3 << endl;
+
 
     return 0;
 };
