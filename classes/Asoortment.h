@@ -1,35 +1,21 @@
-//
-// Created by invokerk1d on 11.03.2024.
-//
-#include <iostream>
 #ifndef UNTITLED_ASOORTMENT_H
 #define UNTITLED_ASOORTMENT_H
+#include <iostream>
 using namespace std;
 
 
-class Asoortment {
-int price , amountOfLikes;
-string  performer;
-static int  countOfProduct;
+class Asoortment
+{
+protected:
+    int price , amountOfLikes;
+    string  performer, track;
+    static int  countOfProduct;
 
 public:
-    Asoortment(): price(0) , amountOfLikes(0) , performer(""){};
-    Asoortment(int price );
-    Asoortment(int price , int amountOfLikes);
-    Asoortment(int price , int amountOfLikes, string performer);
-    string show() const;
+    Asoortment();
+    Asoortment(string performer, string track, int price, int amountOfLikes);
+    ~Asoortment(){ countOfProduct--; };
 
-    Asoortment(const Asoortment &other);
-    Asoortment(Asoortment &&other);
-    static int countOfProducts() { return countOfProduct;};
-    ~Asoortment(){countOfProduct--;};
-
-
-
-
-
-
+    static int countOfProducts() { return countOfProduct; };
 };
-
-
-#endif //UNTITLED_ASOORTMENT_H
+#endif

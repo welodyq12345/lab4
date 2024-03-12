@@ -1,55 +1,24 @@
-//
-// Created by invokerk1d on 11.03.2024.
-//
-
 #include "Asoortment.h"
 int Asoortment::countOfProduct = 0;
-string Asoortment::show() const {
-    return "Performer:" + performer + "\n"
-    +"AmountOfLikes:" + to_string(amountOfLikes) + "\n "
-    + "Price:" + to_string(price) + "\n";
- }
 
-Asoortment::Asoortment(int price ) {
-  this-> price = price;
-  countOfProduct++;
-};
+Asoortment::Asoortment()
+    : Asoortment{"", "", 0, 0} {}
 
-Asoortment::Asoortment(int price , int amountOfLikes): Asoortment(price){
-    this->amountOfLikes = amountOfLikes;
-    countOfProduct++;
+Asoortment::Asoortment(string performer, string track, int price, int amountOfLikes)
+    : performer(performer), track(track), price(price), amountOfLikes(amountOfLikes) { countOfProduct++; };
 
-};
-Asoortment::Asoortment(int price , int amountOfLikes, string performer): Asoortment(price, amountOfLikes){
-    this->performer = performer;
-    countOfProduct++;
-
-
-};
 Asoortment::Asoortment(const Asoortment &other)
-    :performer(other.performer),
-    amountOfLikes(other.amountOfLikes),
-    price(other.price)
+    : performer(other.performer), track(other.track), amountOfLikes(other.amountOfLikes), price(other.price) { countOfProduct++; };
 
-
-
-
-
-{;
-
-    countOfProduct++;
-    cout << "Deep copy constructor called\n";
-};
 Asoortment::Asoortment(Asoortment &&other)
-:performer(other.performer),
-amountOfLikes(other.amountOfLikes),
-price(other.price) {
- other.performer = "";
- other.amountOfLikes = 0;
- other.price = 0;
-    countOfProduct++;
+    : performer(other.performer), track(other.track), amountOfLikes(other.amountOfLikes), price(other.price)
+{
+    other.performer = "";
+    other.track = "";
+    other.amountOfLikes = 0;
+    other.price = 0;
 
-    cout << "Move Constructor called\n";
+    countOfProduct++;
 };
 
 
