@@ -12,6 +12,8 @@ public:
     Jaz();
     Jaz(string performer, string track, int price, int amountOfLikes, string mostPopularPerformer, string mostPopularTrack, int subscribers);
     ~Jaz(){ countOfProduct--; };
+
+    friend ostream &operator << (ostream &os, Jaz &obj);
 };
 
 

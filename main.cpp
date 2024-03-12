@@ -21,6 +21,17 @@ int main(){
     Employee Employer3{Employer2};
     cout << Employer1 << endl << endl << Employer2 << endl << endl << Employer3 << endl;
 
+    cout << "___________________________________" << endl;
 
+    Jaz JazObj1("Crazy Baizy", "I've alone", 1, 0, "Sxfczxc", "ssdfjvbhfd", 555);
+    Jaz JazObj2("Baba Yagha", "Preaty life", 1, 0, "Sxfczxc", "ssdfjvbhfd", 555);
+    cout << JazObj1 << endl << endl << JazObj2 << endl;
+
+    cout << "___________________________________" << endl;
+
+    Rock RockObj("Lil g", "dfvdf", 15000, 6550, "Danya", "Ok");
+    cout << RockObj << endl;
+
+    //Finish
     return 0;
 };
