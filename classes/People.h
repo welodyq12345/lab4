@@ -1,14 +1,19 @@
-//
-// Created by користувач on 12.03.2024.
-//
-
 #ifndef UNTITLED_PEOPLE_H
 #define UNTITLED_PEOPLE_H
+#include <iostream>
+using namespace std;
 
+class People
+{
+protected:
+    string name;
+    int age, money;
 
-class People {
-
+public:
+    People(string name, int age, int money);
+    People(const People &other); //Deep Copy
+    People(People &&other); //Move
 };
 
 
-#endif //UNTITLED_PEOPLE_H
+#endif

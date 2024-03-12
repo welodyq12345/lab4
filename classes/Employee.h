@@ -1,15 +1,14 @@
-//
-// Created by invokerk1d on 11.03.2024.
-//
 #include <iostream>
+#include "People.h"
 #ifndef UNTITLED_EMPLOYEE_H
 #define UNTITLED_EMPLOYEE_H
 using namespace  std;
 
 
-class Employee {
-    int  age , salary;
-    string name;
+class Employee : public People
+{
+    string dateOfBirthday, location;
+    int stage;
 public:
     Employee(int age);
     Employee(int age, int salary);
@@ -22,4 +21,4 @@ public:
 };
 
 
-#endif //UNTITLED_EMPLOYEE_H
+#endif
